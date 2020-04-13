@@ -168,3 +168,72 @@ Processing by PinsController#index as HTML
 Completed 200 OK in 1911ms (Views: 1824.7ms | ActiveRecord: 1.7ms | Allocations: 231319)
 
 
+Started GET "/" for 127.0.0.1 at 2020-04-13 16:51:07 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins" ORDER BY created_at DESC[0m
+  Rendered pins/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 7408)
+Completed 200 OK in 127ms (Views: 108.2ms | ActiveRecord: 1.6ms | Allocations: 42103)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-13 16:51:15 -0500
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT "pins".* FROM "pins" ORDER BY created_at DESC[0m
+  Rendered pins/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 212)
+Completed 200 OK in 30ms (Views: 20.2ms | ActiveRecord: 0.2ms | Allocations: 13280)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-04-13 16:51:19 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___739099062192946830_47307455644940 at /home/ejaramillom/Documentos/proyectos/rails/ror2-reto4/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 97.8ms | Allocations: 7231)
+Completed 200 OK in 144ms (Views: 122.2ms | ActiveRecord: 1.0ms | Allocations: 30959)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-04-13 16:51:22 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.3ms | Allocations: 1562)
+Completed 200 OK in 64ms (Views: 47.6ms | ActiveRecord: 0.0ms | Allocations: 15991)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-04-13 16:51:23 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___739099062192946830_47307455644940 at /home/ejaramillom/Documentos/proyectos/rails/ror2-reto4/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1074)
+Completed 200 OK in 35ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 14314)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-13 16:51:24 -0500
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (2.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins" ORDER BY created_at DESC[0m
+  Rendered pins/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 212)
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 2.3ms | Allocations: 13287)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-04-13 16:51:26 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___739099062192946830_47307455644940 at /home/ejaramillom/Documentos/proyectos/rails/ror2-reto4/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1065)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 14293)
+
+
