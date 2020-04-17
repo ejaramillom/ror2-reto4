@@ -1,5 +1,6 @@
 class Api::V1::PinsController < ApplicationController
-  before_filter :check_auth
+
+  before_action :authenticate
 
   def index
     render json: Pin.all.order('created_at DESC')
@@ -15,15 +16,14 @@ class Api::V1::PinsController < ApplicationController
   end
 
   private
+    def pin_params
+      params.require(:pin).permit(:title, :image_url)
+    end
 
-  def check_auth
-    email = request.headers['X-User-Email']
-    token = request.headers['X-Api-Token']
-    permision = User.exists?(api_token: request.headers['X-Api-Token'], email: request.headers['X-User-Email'])
-    head :unauthorized unless permision
-  end
-
-  def pin_params
-    params.require(:pin).permit(:title, :image_url)
-  end
+    def authenticate
+      email = request.headers['X-User-Email']
+      token = request.headers['X-Api-Token']
+      permision = User.exists?(api_token: request.headers['X-Api-Token'], email: request.headers['X-User-Email'])
+      head :unauthorized unless permision
+    end
 end
