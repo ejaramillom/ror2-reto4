@@ -17,9 +17,10 @@ class Api::V1::PinsController < ApplicationController
   private
 
   def check_auth
-    authenticate_or_request_with_http_token do |token, options|
-      ApiKey.exists?(api_token: token)
-    end
+    email = request.headers['X-User-Email']
+    token = request.headers['X-Api-Token']
+    permision = User.exists?(api_token: request.headers['X-Api-Token'], email: request.headers['X-User-Email'])
+    head :unauthorized unless permision
   end
 
   def pin_params

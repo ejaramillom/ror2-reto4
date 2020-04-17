@@ -473,3 +473,28 @@ Processing by PinsController#index as HTML
 Completed 200 OK in 26ms (Views: 21.1ms | ActiveRecord: 0.8ms | Allocations: 13546)
 
 
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAuthTokenToUsers (20170929041313)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (10.3ms)[0m  [1m[35mALTER TABLE "users" ADD "auth_token" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170929041313"]]
+  [1m[35m (115.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPin Create (0.4ms)[0m  [1m[32mINSERT INTO "pins" ("title", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?)[0m  [["title", "Cool Office"], ["created_at", "2020-04-17 14:39:45.918190"], ["updated_at", "2020-04-17 14:39:45.918190"], ["image_url", "https://s3.amazonaws.com/makeitreal/pins/office.jpg"]]
+  [1m[35m (79.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPin Create (0.7ms)[0m  [1m[32mINSERT INTO "pins" ("title", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?)[0m  [["title", "Lamborghini Aventador"], ["created_at", "2020-04-17 14:39:45.999949"], ["updated_at", "2020-04-17 14:39:45.999949"], ["image_url", "https://s3.amazonaws.com/makeitreal/pins/lamborghini.jpg"]]
+  [1m[35m (84.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPin Create (0.5ms)[0m  [1m[32mINSERT INTO "pins" ("title", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?)[0m  [["title", "Tianmen Mountain National Park, Zhangjiajie, Northwestern Hunan Province, China"], ["created_at", "2020-04-17 14:39:46.088533"], ["updated_at", "2020-04-17 14:39:46.088533"], ["image_url", "https://s3.amazonaws.com/makeitreal/pins/tianmen.jpg"]]
+  [1m[35m (85.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPin Create (0.4ms)[0m  [1m[32mINSERT INTO "pins" ("title", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?)[0m  [["title", "Luxury Car"], ["created_at", "2020-04-17 14:39:46.177798"], ["updated_at", "2020-04-17 14:39:46.177798"], ["image_url", "https://s3.amazonaws.com/makeitreal/pins/luxury-car.jpg"]]
+  [1m[35m (88.6ms)[0m  [1m[36mcommit transaction[0m
